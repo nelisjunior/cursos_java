@@ -6,24 +6,24 @@ package Exercicios.Metodos;
  */
 public class Quadrilatero {
 
-    public static void calcArea(double lado) {
+    public static double calcArea(double lado) {
 
-        System.out.println("A área do quadrado é: " + lado * lado);
+        return (lado * lado);
     }
 
-    public static void calcArea(double lado1, double lado2) {
+    public static double calcArea(double lado1, double lado2) {
 
-        System.out.println("A área do retângulo é: " + lado1 * lado2);
+        return (lado1 * lado2);
     }
 
-    public static void calcArea(double baseMaior, double baseMenor, double altura) {
+    public static double calcArea(double baseMaior, double baseMenor, double altura) {
 
-        System.out.println("A área do trapézio é: " + ((baseMaior + baseMenor) * altura) / 2);
+        return ((baseMaior + baseMenor) * altura) / 2;
     }
 
-    public static void calcArea(float diagonal, float diagonal2) {
+    public static double calcArea(float diagonal, float diagonal2) {
 
-        System.out.println("A área do losango é: " + (diagonal * diagonal2) / 2);
+        return (diagonal * diagonal2) / 2;
     }
 
 }
