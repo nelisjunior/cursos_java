@@ -1,24 +1,57 @@
 import java.util.Scanner;
 
 import Exercicios.Metodos.Calculadora;
+import Exercicios.Metodos.Quadrilatero;
+
 import static Exercicios.Metodos.Mensagem.horaDia;
 import static Exercicios.Metodos.meuEmprestimo.calcEmprestimo;
 import static java.lang.Thread.sleep;
 
+
 public class Main {
+
+    static Scanner ler= new Scanner(System.in);
 
     public static void main(String[] args) throws InterruptedException {
 
+        int n;
 
-        Scanner ler= new Scanner(System.in);
+        System.out.println(horaDia());
+
+        sleep(1000);
+
+        System.out.println("BEM VINDO!");
+        sleep(500);
+
+        System.out.println("Escolha uma das opções:");
+        sleep(500);
+        System.out.println("(1) Exercício 1\n(2) Exercício 2");
+        n = ler.nextInt();
+        sleep(500);
+
+        //listagem dos métodos existentes
+        switch (n) {
+            case 1 -> chamaExercicio01();
+            case 2 -> chamaExercicio02();
+            default -> {
+                System.out.println("Opção inválida!");
+                sleep(1000);
+                System.out.println("Encerrando...");
+                sleep(1000);
+                System.out.println("Fim do programa!");
+            }
+        }
+
+
+    }
+
+    public static void chamaExercicio01() throws InterruptedException {
 
         int valorA, valorB;
         String op;
 
         int valorPego; // valor que o cliente quer pegar
         int parcelas; // Em meses
-
-        System.out.println(horaDia());
 
         sleep(1000);
 
@@ -48,7 +81,22 @@ public class Main {
         sleep(500);
         System.out.println("O valor total que irá pagar pelo empréstimo é: " + calcEmprestimo(valorPego, parcelas));
 
+    }
+
+    public static void chamaExercicio02() throws InterruptedException {
+
+        sleep(1000);
+        System.out.println("BEM VINDO!");
+        sleep(500);
+        System.out.println("Conheça os métodos aprendidos no exerício 02 do curso de Java!");
+        sleep(500);
+
+        Quadrilatero.calcArea(5);
+        Quadrilatero.calcArea(5d, 10d);
+        Quadrilatero.calcArea(5, 10, 15);
+        Quadrilatero.calcArea(5f, 10f);
 
     }
+
 
 }

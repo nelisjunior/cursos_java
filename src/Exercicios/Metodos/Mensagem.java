@@ -2,7 +2,7 @@ package Exercicios.Metodos;
 
 import java.util.Calendar;
 
-    public class Mensagem {
+public class Mensagem {
         public static String horaDia() {
 
             int hora = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
@@ -16,4 +16,4 @@ import java.util.Calendar;
             }
         }
 
-}
+    }
