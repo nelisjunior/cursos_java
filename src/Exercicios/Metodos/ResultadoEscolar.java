@@ -6,9 +6,12 @@ public class ResultadoEscolar {
         int nota = 6;
 
         if(nota >= 7)
-            System.out.println("Aprovado!");
+            System.out.println("Alun@ aprovad@!");
+
+        else if (nota >= 5 && nota < 7)
+            System.out.println("Aun@ está em recuperação!");
 
         else
-            System.out.println("Reprovado!");
+            System.out.println("Alun@ reprovado!");
     }
 }
